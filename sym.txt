@@ -1,0 +1,105 @@
+chills
+fatigue
+fever
+night sweats
+shivering
+sweating
+diarrhoea
+nausea
+vomiting
+fast heart rate
+headache
+confusion
+pallor
+muscle pain
+abdominal pain
+bloating
+constipation
+loss of appetite
+malaise
+muscle weakness
+rash
+weight loss
+dehydration
+lethargy
+electrolyte imbalance
+body pain
+cough
+flushing
+congestion
+runny nose
+sneezing
+chest discomfort
+shortness of breath
+sore throat
+swollen lymph nodes
+chest pain
+muscle loss
+phlegm
+back pain
+joint pain
+pale stools
+dark urine
+abdominal cramps
+loose motion
+blister
+scab
+ulcers
+red spots
+itching
+eyes pain
+rashes
+easy bruising
+bones pain
+low blood count
+darkening of skin
+light sensitivity
+pink eye
+bleeding
+delirium
+tender lymph nodes
+clammy skin
+fast breathing
+shallow breathing
+wheezing
+coughing
+feeling faint
+wasting away
+mucle loss
+muscle quiver
+stunted growth
+painless ulcers
+sores
+vaginal discharge
+genital warts
+small bump
+mouth ulcer
+rectal inflammation
+high blood pressure
+nervous dysfunction
+muscle spasms
+facial muscle spasms
+stiff muscles
+lockjaw
+abdominal rigidity
+difficulty swallowing
+drooling
+irritability
+stiff neck
+excess salivation
+paralysis
+dizziness
+anxiety
+brain death
+coma
+dilated pupil
+seizures
+red skin patches
+reduced skin sensation
+numbness
+weak hands and feet
+blisters
+loss of colour
+redness
+nerve injury
+
