@@ -87,6 +87,7 @@ def classifier(diseases, symptoms):
         i = i+1
     if(max_score_i < len(most_pot_diseases)):
         print("The most likely disease is " + most_pot_diseases[max_score_i].get_name())
+        return most_pot_diseases[max_score_i].get_name()
     else:
-        print("The most likely disease is " + maybe_pot_diseases[max_score_i-len(most_pot_diseases)].get_name())
-    return
+        #print("The most likely disease is " + maybe_pot_diseases[max_score_i-len(most_pot_diseases)].get_name())
+        return maybe_pot_diseases[max_score_i-len(most_pot_diseases)].get_name()
