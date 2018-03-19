@@ -62,6 +62,7 @@ def classifier(diseases, symptoms):
         loc = most_pot_disease.get_loc()
         cli = most_pot_disease.get_cli()
         score.append(max_match_count*1200 + pd * 0.3 + loc * 0.35 + cli * 0.35)
+        print("score " + str(max_match_count*1200 + pd * 0.3 + loc * 0.35 + cli * 0.35) + " for " + most_pot_disease.get_name())
         i = i+1
 
     for maybe_pot_disease in maybe_pot_diseases:
@@ -69,6 +70,8 @@ def classifier(diseases, symptoms):
         loc = maybe_pot_disease.get_loc()
         cli = maybe_pot_disease.get_cli()
         score.append((max_match_count - 1) * 1000 + pd * 0.3 + loc * 0.35 + cli * 0.35)
+        print("score " + str(
+            (max_match_count - 1) * 1000 + pd * 0.3 + loc * 0.35 + cli * 0.35) + " for " + maybe_pot_disease.get_name())
         i = i + 1
 
     max_score = 0
