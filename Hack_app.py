@@ -3,7 +3,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter, A4
-
+from dbutils import getDiseases, init
+from classifier import classifier
 
 
 class Main_Window(Gtk.Window):
@@ -216,8 +217,20 @@ class Main_Window(Gtk.Window):
             dialog_error.destroy()
             return
 
+        list = []
+        list.append([self.symptom1.get_text(), self.symptom2.get_text()])
+        if(len(self.symptom3.get_text())>0):
+            list.append(self.symptom3.get_text())
+        if (len(self.symptom4.get_text()) > 0):
+            list.append(self.symptom4.get_text())
+        if (len(self.symptom5.get_text()) > 0):
+            list.append(self.symptom5.get_text())
+
         #TODO CALL HIMANSHU NAIN FOR THE DISEASE
-        disease = "Malaria"
+        init()
+        all_Diseases = getDiseases(list)
+
+        disease = classifier(all_Diseases, list)
 
         dialog_answer = Answer(self, disease)
         response = dialog_answer.run()
