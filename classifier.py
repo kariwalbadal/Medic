@@ -2,11 +2,11 @@ def classifier(diseases, symptoms):
 
     if len(symptoms) == 0:
         print("Empty symptoms list. Try again.")
-        return
+        return []
 
     if(len(diseases) == 0):
         print("No matching disease found")
-        return
+        return []
 
     max_match_count = 0
     min_match_count = 500
@@ -25,6 +25,8 @@ def classifier(diseases, symptoms):
         if match_count < min_match_count:
             min_match_count = match_count
     disease_match_bucket = [[]]
+    #print("max match"+str(max_match_count))
+    #print("Min match"+str(min_match_count))
     for x in range(max_match_count-min_match_count+1):
         disease_match_bucket.append([])
     #print((disease_match_bucket))
@@ -39,12 +41,9 @@ def classifier(diseases, symptoms):
                     match_count = match_count+1
                 else:
                     unmatch_count = unmatch_count+1
-        try:
-            disease_match_bucket[max_match_count-match_count].append(disease)
-        except Exception as e:
-            print(len(disease_match_bucket))
-            #print(unmatch_count-min_match_count)
-            exit()
+
+        disease_match_bucket[max_match_count-match_count].append(disease)
+        #print(len(disease_match_bucket))
 
 
 
@@ -56,7 +55,8 @@ def classifier(diseases, symptoms):
     #print(len(disease_match_bucket))
     score = []
     i = 0
-
+    #print(most_pot_diseases)
+    #print(maybe_pot_diseases)
     for most_pot_disease in most_pot_diseases:
         pd = most_pot_disease.get_pd()
         loc = most_pot_disease.get_loc()
@@ -83,10 +83,10 @@ def classifier(diseases, symptoms):
         if(x > max_score):
             max_score = score[i]
             max_score_i = i
-        #print(pot_diseases[i].get_name()+" score "+str(x))
+#        print(pot_diseases[i].get_name()+" score "+str(x))
         i = i+1
     if(max_score_i < len(most_pot_diseases)):
-        print("The most likely disease is " + most_pot_diseases[max_score_i].get_name())
+        #print("The most likely disease is " + most_pot_diseases[max_score_i].get_name())
         return most_pot_diseases[max_score_i].get_name()
     else:
         #print("The most likely disease is " + maybe_pot_diseases[max_score_i-len(most_pot_diseases)].get_name())

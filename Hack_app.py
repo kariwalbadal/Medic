@@ -134,7 +134,7 @@ class Main_Window(Gtk.Window):
         for text in problems:
             self.liststore.append([text])
 
-        problems.remove('')
+#        problems.remove('')
         self.treeview = Gtk.TreeView(self.liststore)
 
 
@@ -218,7 +218,9 @@ class Main_Window(Gtk.Window):
             return
 
         list = []
-        list.append([self.symptom1.get_text(), self.symptom2.get_text()])
+        list.append(self.symptom1.get_text())
+        list.append(self.symptom2.get_text())
+        print(list)
         if(len(self.symptom3.get_text())>0):
             list.append(self.symptom3.get_text())
         if (len(self.symptom4.get_text()) > 0):
@@ -230,12 +232,11 @@ class Main_Window(Gtk.Window):
 
         init()
         all_Diseases = getDiseases(list)
-
         self.disease = classifier(all_Diseases, list)
 
         dialog_answer = Answer(self, self.disease)
         response = dialog_answer.run()
-
+        self.save_file(response)
         dialog_answer.destroy()
 
 
@@ -299,52 +300,9 @@ class Main_Window(Gtk.Window):
         y = 550-60-40*optional_symptoms
         c.drawString(275, y, "Disease")
         c.setFont('Helvetica', 16, leading=None)
-        c.drawString(5, y-60, "The Patient is suffering from "+self.disease)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # if len(self.symptom3.get_text()) != 0:
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(5, 510, "3. ")
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(20, 510, self.symptom3.get_text())
-        # if len(self.symptom4.get_text()) != 0:
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(5, 470, "4. ")
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(20, 470, self.symptom4.get_text())
-        # if len(self.symptom5.get_text()) != 0:
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(5,430, "5. ")
-        #     c.setFont('Helvetica', 16, leading=None)
-        #     c.drawString(20, 430, self.symptom5.get_text())
-
+        c.drawString(160, y-60, "The Patient is suffering from "+self.disease)
         c.showPage()
         c.save()
-
-
-
-
-
-
 
 class PopUp(Gtk.Dialog):
 
@@ -353,7 +311,7 @@ class PopUp(Gtk.Dialog):
         Gtk.Dialog.__init__(self, "Error", parent, Gtk.DialogFlags.MODAL, (Gtk.STOCK_OK, Gtk.ResponseType.OK))
         self.set_default_size(100, 50)
         self.set_border_width(20)
-
+        self.set_position(Gtk.WindowPosition.CENTER)
         area = self.get_content_area()
         area.add(Gtk.Label("Atleast Two Symptoms are required."))
         self.show_all()
@@ -370,6 +328,7 @@ class Answer(Gtk.Dialog):
         Gtk.Dialog.__init__(self, "Disease", parent, Gtk.DialogFlags.MODAL, (Gtk.STOCK_OK, Gtk.ResponseType.OK))
         self.set_default_size(100,50)
         self.set_border_width(20)
+        self.set_position(Gtk.WindowPosition.CENTER)
         self.disease = disease
         area = self.get_content_area()
         area.add(Gtk.Label("The Possible Disease Patient is suffering from is " + self.disease))
@@ -384,6 +343,7 @@ class Error(Gtk.Dialog):
         Gtk.Dialog.__init__(self, "Error", parent, Gtk.DialogFlags.MODAL, (Gtk.STOCK_OK, Gtk.ResponseType.OK))
         self.set_default_size(100, 50)
         self.set_border_width(20)
+        self.set_position(Gtk.WindowPosition.CENTER)
         area = self.get_content_area()
         area.add(Gtk.Label("The Entered Symptom is Wrong."))
         self.show_all()
@@ -402,6 +362,7 @@ class Error(Gtk.Dialog):
 
 
 window = Main_Window()
+window.set_position(Gtk.WindowPosition.CENTER)
 window.connect("delete-event", Gtk.main_quit)
 window.show_all()
 Gtk.main()

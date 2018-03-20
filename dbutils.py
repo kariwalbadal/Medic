@@ -1,5 +1,5 @@
 from mongoengine import *
-from disease import Disease
+from Disease import Disease
 
 
 def init():
