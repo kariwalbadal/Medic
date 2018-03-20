@@ -134,8 +134,6 @@ class Main_Window(Gtk.Window):
         for text in problems:
             self.liststore.append([text])
 
-#        problems.remove('')
-        self.treeview = Gtk.TreeView(self.liststore)
 
 
         completion1.set_model(self.liststore)
@@ -149,52 +147,17 @@ class Main_Window(Gtk.Window):
         completion4.set_text_column(0)
         completion5.set_text_column(0)
 
+
+
         self.symptom1.set_completion(completion1)
         self.symptom2.set_completion(completion2)
         self.symptom3.set_completion(completion3)
         self.symptom4.set_completion(completion4)
         self.symptom5.set_completion(completion5)
 
-        # if len(self.symptom1.get_text()) != 0:
-        #     for i in problems:
-        #         if self.symptom1.get_text() != i:
-        #             dialog_entry_error = Error(self)
-        #             response = dialog_entry_error.run()
-        #             dialog_entry_error.destroy()
-        #             break
-        #
-        # if len(self.symptom2.get_text()) != 0:
-        #     for i in problems:
-        #         if self.symptom2.get_text() != i:
-        #             dialog_entry_error = Error(self)
-        #             response = dialog_entry_error.run()
-        #             dialog_entry_error.destroy()
-        #             break
-        #
-        # if len(self.symptom3.get_text()) != 0:
-        #     for i in problems:
-        #         if self.symptom3.get_text() != i:
-        #             dialog_entry_error = Error(self)
-        #             response = dialog_entry_error.run()
-        #             dialog_entry_error.destroy()
-        #             break
-        #
-        #
-        # if len(self.symptom4.get_text()) != 0:
-        #     for i in problems:
-        #         if self.symptom4.get_text() != i:
-        #             dialog_entry_error = Error(self)
-        #             response = dialog_entry_error.run()
-        #             dialog_entry_error.destroy()
-        #             break
-        #
-        # if len(self.symptom5.get_text()) != 0:
-        #     for i in problems:
-        #         if self.symptom5.get_text() != i:
-        #             dialog_entry_error = Error(self)
-        #             response = dialog_entry_error.run()
-        #             dialog_entry_error.destroy()
-        #             break
+
+
+
 
 
         #SUBMIT BUTTON
@@ -216,6 +179,47 @@ class Main_Window(Gtk.Window):
 
             dialog_error.destroy()
             return
+
+        if len(self.symptom1.get_text()) != 0:
+            for i in self.liststore:
+                if self.symptom1.get_text() != i:
+                    dialog_entry_error = Error(self)
+                    response = dialog_entry_error.run()
+                    dialog_entry_error.destroy()
+                    return
+
+        if len(self.symptom2.get_text()) != 0:
+            for i in self.liststore:
+                if self.symptom2.get_text() != i:
+                    dialog_entry_error = Error(self)
+                    response = dialog_entry_error.run()
+                    dialog_entry_error.destroy()
+                    return
+
+        if len(self.symptom3.get_text()) != 0:
+            for i in self.liststore:
+                if self.symptom3.get_text() != i:
+                    dialog_entry_error = Error(self)
+                    response = dialog_entry_error.run()
+                    dialog_entry_error.destroy()
+                    return
+
+
+        if len(self.symptom4.get_text()) != 0:
+            for i in self.liststore:
+                if self.symptom4.get_text() != i:
+                    dialog_entry_error = Error(self)
+                    response = dialog_entry_error.run()
+                    dialog_entry_error.destroy()
+                    return
+
+        if len(self.symptom5.get_text()) != 0:
+            for i in self.liststore:
+                if self.symptom5.get_text() != i:
+                    dialog_entry_error = Error(self)
+                    response = dialog_entry_error.run()
+                    dialog_entry_error.destroy()
+                    return
 
         list = []
         list.append(self.symptom1.get_text())
