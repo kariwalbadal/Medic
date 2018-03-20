@@ -35,17 +35,14 @@ class Main_Window(Gtk.Window):
         file_menu = Gtk.Menu()
         file_menu_dropdown = Gtk.MenuItem("File")
 
-        file_new = Gtk.MenuItem("New")
         file_save = Gtk.MenuItem("Save")
         file_exit = Gtk.MenuItem("Exit")
 
         file_exit.connect("activate", Gtk.main_quit)
         file_save.connect("activate", self.save_file)
-        file_new.connect("activate", self.new_file)
 
         file_menu_dropdown.set_submenu(file_menu)
 
-        file_menu.append(file_new)
         file_menu.append(file_save)
         file_menu.append(Gtk.SeparatorMenuItem())
         file_menu.append(file_exit)
@@ -293,10 +290,18 @@ class Main_Window(Gtk.Window):
 
         try:
             send_mail(self.name.get_text(), date, time, self.name.get_text()+"_"+date+"_"+time+".pdf")
-            #todo the mail has been sent
+
+            dialog_mail_sent = Mail(self)
+            response = dialog_mail_sent.run()
+            dialog_mail_sent.destroy()
+
         except Exception as e:
-            #todo the report couldn't be mailed to the doctor
-            print(str(e))
+
+            dialog_mail_error = Mail_error(self)
+            response = dialog_mail_error.run()
+            dialog_mail_error.destroy()
+
+
         filep = './Reports/' + self.name.get_text()+"_"+date+"_"+time+".pdf"
         os.system('/usr/bin/xdg-open '+filep)
         self.name.set_text('')
@@ -308,17 +313,6 @@ class Main_Window(Gtk.Window):
         self.symptom1.set_text('')
         self.symptom5.set_text('')
         self.symptom4.set_text('')
-
-
-
-
-
-
-
-    def new_file(self, widget):
-        #TODO IMPROVEMENT
-
-        open("Hack_app.py")
 
 
     def save_file(self, widget):
@@ -478,7 +472,30 @@ class Number(Gtk.Dialog):
         self.show_all()
 
 
+class Mail(Gtk.Dialog):
 
+    def __init__(self, parent):
+
+        Gtk.Dialog.__init__(self, "Mail Sent", parent, Gtk.DialogFlags.MODAL, (Gtk.STOCK_OK, Gtk.ResponseType.OK))
+        self.set_default_size(130, 80)
+        self.set_border_width(20)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        area = self.get_content_area()
+        area.add(Gtk.Label("The Mail has been sent"))
+        self.show_all()
+
+
+class Mail_error(Gtk.Dialog):
+
+    def __init__(self, parent):
+
+        Gtk.Dialog.__init__(self, "Error", parent, Gtk.DialogFlags.MODAL, (Gtk.STOCK_OK, Gtk.ResponseType.OK))
+        self.set_default_size(130, 80)
+        self.set_border_width(20)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        area = self.get_content_area()
+        area.add(Gtk.Label("The report couldn't be mailed to the doctor"))
+        self.show_all()
 
 
 
