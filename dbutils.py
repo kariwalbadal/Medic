@@ -1,9 +1,12 @@
 from mongoengine import *
 from Disease import Disease
 
-
 def init():
-    connect('Health', host="localhost", port=27017)
+    db_client = connect('Health', host="localhost", port=27017)
+    return db_client
+
+def destroy(db_client):
+    db_client.close()
 
 def insertDisease(d):
     d.save()
@@ -43,4 +46,3 @@ def getAllSymptomps():
                 result = result + "\n" + symptom
 
     return result
-
