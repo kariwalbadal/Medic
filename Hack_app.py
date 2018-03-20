@@ -16,7 +16,7 @@ class Main_Window(Gtk.Window):
 
         Gtk.Window.__init__(self, title = "Medical App")
         self.set_border_width(10)
-        self.set_default_size(850, 500)
+        self.set_default_size(850, 300)
 
 
         #MAKING BOXES
@@ -226,13 +226,14 @@ class Main_Window(Gtk.Window):
         if (len(self.symptom5.get_text()) > 0):
             list.append(self.symptom5.get_text())
 
-        #TODO CALL HIMANSHU NAIN FOR THE DISEASE
+        #DISEASE SELECTION USING CLASSIFIER
+
         init()
         all_Diseases = getDiseases(list)
 
-        disease = classifier(all_Diseases, list)
+        self.disease = classifier(all_Diseases, list)
 
-        dialog_answer = Answer(self, disease)
+        dialog_answer = Answer(self, self.disease)
         response = dialog_answer.run()
 
         dialog_answer.destroy()
@@ -272,21 +273,69 @@ class Main_Window(Gtk.Window):
         c.drawString(5, 550, "2. ")
         c.setFont('Helvetica', 16, leading=None)
         c.drawString(20, 550, self.symptom2.get_text())
-        if len(self.symptom3.get_text()) != 0:
+
+        optional_symptoms = 0
+
+        if len(self.symptom3.get_text()) > 0:
+            optional_symptoms = optional_symptoms + 1
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(5, 510, "3. ")
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(20, 510, self.symptom3.get_text())
-        if len(self.symptom4.get_text()) != 0:
+        if len(self.symptom4.get_text()) > 0:
+            optional_symptoms = optional_symptoms + 1
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(5, 470, "4. ")
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(20, 470, self.symptom4.get_text())
-        if len(self.symptom5.get_text()) != 0:
+        if len(self.symptom5.get_text()) > 0:
+            optional_symptoms = optional_symptoms + 1
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(5,430, "5. ")
             c.setFont('Helvetica', 16, leading=None)
             c.drawString(20, 430, self.symptom5.get_text())
+
+        c.setFont('Helvetica', 20, leading=None)
+        y = 550-60-40*optional_symptoms
+        c.drawString(275, y, "Disease")
+        c.setFont('Helvetica', 16, leading=None)
+        c.drawString(5, y-60, "The Patient is suffering from "+self.disease)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # if len(self.symptom3.get_text()) != 0:
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(5, 510, "3. ")
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(20, 510, self.symptom3.get_text())
+        # if len(self.symptom4.get_text()) != 0:
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(5, 470, "4. ")
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(20, 470, self.symptom4.get_text())
+        # if len(self.symptom5.get_text()) != 0:
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(5,430, "5. ")
+        #     c.setFont('Helvetica', 16, leading=None)
+        #     c.drawString(20, 430, self.symptom5.get_text())
 
         c.showPage()
         c.save()
