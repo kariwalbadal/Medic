@@ -1,0 +1,497 @@
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e4c"
+	},
+	"name": "Malaria",
+	"pd": 6546,
+	"cli": 3462,
+	"loc": 2158,
+	"symptoms": [
+		"chills",
+		"fatigue",
+		"fever",
+		"night sweats",
+		"shivering",
+		"sweating",
+		"diarrhoea",
+		"nausea",
+		"vomiting",
+		"fast heart rate",
+		"headache",
+		"confusion",
+		"pallor",
+		"muscle pain",
+		"abdominal pain"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e4d"
+	},
+	"name": "Typhoid Fever",
+	"pd": 5000,
+	"cli": 2500,
+	"loc": 3000,
+	"symptoms": [
+		"abdominal pain",
+		"muscle pain",
+		"bloating",
+		"constipation",
+		"diarrhoea",
+		"nausea",
+		"vomiting",
+		"fatigue",
+		"fever",
+		"chills",
+		"loss of appetite",
+		"malaise",
+		"headache",
+		"muscle weakness",
+		"rash",
+		"weight loss"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e4e"
+	},
+	"name": "Cholera",
+	"pd": 6000,
+	"cli": 2125,
+	"loc": 4000,
+	"symptoms": [
+		"abdominal pain",
+		"nausea",
+		"diarrhoea",
+		"vomiting",
+		"dehydration",
+		"lethargy",
+		"electrolyte imbalance"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e4f"
+	},
+	"name": "Flu",
+	"pd": 8000,
+	"cli": 4000,
+	"loc": 6000,
+	"symptoms": [
+		"muscle pain",
+		"body pain",
+		"cough",
+		"chills",
+		"dehydration",
+		"fatigue",
+		"fever",
+		"flushing",
+		"loss of appetite",
+		"sweating",
+		"congestion",
+		"runny nose",
+		"sneezing",
+		"chest discomfort",
+		"confusion",
+		"headache",
+		"nausea",
+		"shortness of breath",
+		"sore throat",
+		"swollen lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e50"
+	},
+	"name": "Tuberculosis",
+	"pd": 5782,
+	"cli": 5928,
+	"loc": 4928,
+	"symptoms": [
+		"chest pain",
+		"chest discomfort",
+		"cough",
+		"fatigue",
+		"fever",
+		"loss of appetite",
+		"malaise",
+		"sweating",
+		"muscle loss",
+		"phlegm",
+		"weight loss",
+		"shortness of breath",
+		"swollen lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e51"
+	},
+	"name": "Brucellosis",
+	"pd": 1000,
+	"cli": 628,
+	"loc": 800,
+	"symptoms": [
+		"abdominal pain",
+		"back pain",
+		"joint pain",
+		"muscle pain",
+		"fever",
+		"chills",
+		"fatigue",
+		"loss of appetite",
+		"sweating",
+		"cough",
+		"headache",
+		"swollen lymph nodes",
+		"weight loss"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e52"
+	},
+	"name": "Jaundice",
+	"pd": 4829,
+	"cli": 2387,
+	"loc": 2238,
+	"symptoms": [
+		"fatigue",
+		"abdominal pain",
+		"weight loss",
+		"vomiting",
+		"fever",
+		"pale stools",
+		"dark urine"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafc3c0c700881be7da4e53"
+	},
+	"name": "Diarrhoea",
+	"pd": 8000,
+	"cli": 2397,
+	"loc": 7000,
+	"symptoms": [
+		"abdominal cramps",
+		"abdominal pain",
+		"nausea",
+		"vomiting",
+		"loose motion"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67075"
+	},
+	"name": "Chicken Pox",
+	"pd": 8123,
+	"cli": 5698,
+	"loc": 6523,
+	"symptoms": [
+		"blister",
+		"scab",
+		"ulcers",
+		"red spots",
+		"fatigue",
+		"fever",
+		"loss of appetite",
+		"headache",
+		"itching",
+		"sore throat",
+		"swollen lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67076"
+	},
+	"name": "Chikungunya",
+	"pd": 4569,
+	"cli": 2397,
+	"loc": 3469,
+	"symptoms": [
+		"abdominal pain",
+		"eyes pain",
+		"joint pain",
+		"muscle pain",
+		"chills",
+		"fatigue",
+		"fever",
+		"loss of appetite",
+		"nausea",
+		"vomiting",
+		"rashes",
+		"red spots",
+		"easy bruising",
+		"headache"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67077"
+	},
+	"name": "Dengue Fever",
+	"pd": 7898,
+	"cli": 5397,
+	"loc": 6000,
+	"symptoms": [
+		"abdominal pain",
+		"back pain",
+		"eyes pain",
+		"bones pain",
+		"joint pain",
+		"muscle pain",
+		"chills",
+		"fatigue",
+		"fever",
+		"loss of appetite",
+		"nausea",
+		"vomiting",
+		"rashes",
+		"red spots",
+		"easy bruising",
+		"headache"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67078"
+	},
+	"name": "Kala Azar",
+	"pd": 4000,
+	"cli": 3397,
+	"loc": 2985,
+	"symptoms": [
+		"abdominal pain",
+		"fever",
+		"loss of appetite",
+		"low blood count",
+		"malaise",
+		"sweating",
+		"weight loss",
+		"darkening of skin",
+		"diarrhoea",
+		"headache",
+		"spots",
+		"light sensitivity",
+		"sore throat",
+		"swollen lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67079"
+	},
+	"name": "Measles",
+	"pd": 4500,
+	"cli": 2900,
+	"loc": 3500,
+	"symptoms": [
+		"muscle pain",
+		"fever",
+		"malaise",
+		"fatigue",
+		"loss of appetite",
+		"runny nose",
+		"sneezing",
+		"rash",
+		"cough",
+		"pink eye",
+		"diarrhoea",
+		"headache",
+		"spots",
+		"light sensitivity",
+		"sore throat",
+		"swollen lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707a"
+	},
+	"name": "Plague",
+	"pd": 5698,
+	"cli": 4213,
+	"loc": 4600,
+	"symptoms": [
+		"abdominal pain",
+		"muscle pain",
+		"cough",
+		"fever",
+		"chills",
+		"fatigue",
+		"malaise",
+		"diarrhoea",
+		"nausea",
+		"vomiting",
+		"bleeding",
+		"delirium",
+		"headache",
+		"phlegm",
+		"shortness of breath",
+		"swollen lymph nodes",
+		"tender lymph nodes"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707b"
+	},
+	"name": "Pneumonia",
+	"pd": 3000,
+	"cli": 1397,
+	"loc": 2900,
+	"symptoms": [
+		"chest pain",
+		"fever",
+		"chills",
+		"dehydration",
+		"fatigue",
+		"loss of appetite",
+		"malaise",
+		"clammy skin",
+		"sweating",
+		"fast breathing",
+		"shallow breathing",
+		"shortness of breath",
+		"wheezing",
+		"coughing",
+		"fast heart rate"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707c"
+	},
+	"name": "Polio",
+	"pd": 2000,
+	"cli": 987,
+	"loc": 1500,
+	"symptoms": [
+		"fatigue",
+		"feeling faint",
+		"fever",
+		"wasting away",
+		"muscle weakness",
+		"mucle loss",
+		"muscle quiver",
+		"headache",
+		"nausea",
+		"stunted growth"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707d"
+	},
+	"name": "Syphilis",
+	"pd": 3100,
+	"cli": 2245,
+	"loc": 2456,
+	"symptoms": [
+		"painless ulcers",
+		"sores",
+		"vaginal discharge",
+		"genital warts",
+		"rash",
+		"small bump",
+		"ulcers",
+		"fatigue",
+		"itching",
+		"mouth ulcer",
+		"rectal inflammation",
+		"sore throat",
+		"swollen lymph nodes",
+		"weight loss"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707e"
+	},
+	"name": "Tetanus",
+	"pd": 5698,
+	"cli": 3985,
+	"loc": 4590,
+	"symptoms": [
+		"fever",
+		"high blood pressure",
+		"nervous dysfunction",
+		"sweating",
+		"muscle spasms",
+		"cramps",
+		"facial muscle spasms",
+		"stiff muscles",
+		"shortness of breath",
+		"lockjaw",
+		"abdominal rigidity",
+		"difficulty swallowing",
+		"drooling",
+		"fast heart rate",
+		"irritability",
+		"stiff neck"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae6707f"
+	},
+	"name": "Rabies",
+	"pd": 3569,
+	"cli": 1598,
+	"loc": 2689,
+	"symptoms": [
+		"fever",
+		"headache",
+		"excess salivation",
+		"muscle spasms",
+		"paralysis",
+		"confusion",
+		"muscle pain",
+		"dizziness",
+		"fatigue",
+		"fever",
+		"loss of appetite",
+		"malaise",
+		"nausea",
+		"vomiting",
+		"muscle spasms",
+		"irritability",
+		"anxiety",
+		"brain death",
+		"coma",
+		"difficulty swallowing",
+		"dilated pupil",
+		"drooling",
+		"headache",
+		"confusion",
+		"seizures",
+		"stiff neck"
+	]
+}
+{
+	"_id": {
+		"$oid": "5aafdb63c70088278ae67080"
+	},
+	"name": "Leprosy",
+	"pd": 1900,
+	"cli": 1845,
+	"loc": 1865,
+	"symptoms": [
+		"red skin patches",
+		"reduced skin sensation",
+		"numbness",
+		"weak hands and feet",
+		"joint pain",
+		"blisters",
+		"loss of colour",
+		"rash",
+		"ulcers",
+		"redness",
+		"nerve injury",
+		"weight loss"
+	]
+}
