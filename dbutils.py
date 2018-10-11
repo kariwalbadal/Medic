@@ -1,6 +1,9 @@
 from mongoengine import *
 from Disease import Disease
 
+#database operations
+
+
 def init():
     db_client = connect('Health', host="localhost", port=27017)
     return db_client
